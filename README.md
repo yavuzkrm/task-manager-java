@@ -3,7 +3,7 @@
 This project is a console-based Task Manager application developed in Java.
 It allows users to manage tasks through a simple command-line interface while following object-oriented programming principles.
 
-##✅ Features
+## ✅ Features
 - Add new tasks
 - List all existing tasks
 - Mark tasks as completed
