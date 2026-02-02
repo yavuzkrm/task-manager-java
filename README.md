@@ -23,7 +23,7 @@ It allows users to manage tasks through a simple command-line interface while fo
 ▶️ How to Run
 
 1. Clone the repository
-git clone https://github.com/username/task-manager-java.git
+git clone https://github.com/yavuzkrm/task-manager-java.git
 
 2. Compile the project
 javac Main.java
