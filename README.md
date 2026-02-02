@@ -24,12 +24,12 @@ git clone https://github.com/yavuzkrm/task-manager-java.git
 
 Compile the project
 ```bash
-javac src/Main.java
+javac -d out src/**/*.java
 ```
 
 Run the application
 ```bash
-java src.Main
+java -cp out Main
 ```
 
 ## 📁 Project Structure
