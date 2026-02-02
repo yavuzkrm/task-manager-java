@@ -24,7 +24,7 @@ git clone https://github.com/yavuzkrm/task-manager-java.git
 
 Compile the project
 ```bash
-javac -d out src/**/*.java
+javac -d out src/Main.java src/model/Task.java src/service/TaskManager.java
 ```
 
 Run the application
