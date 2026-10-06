@@ -1,44 +1,46 @@
-## 📌 Simple Java Task Manager
+# Task Manager (Java)
 
-This project is a console-based Task Manager application developed in Java.
-It allows users to manage tasks through a simple command-line interface while following object-oriented programming principles.
+A small command-line task manager I wrote while learning Java and object-oriented programming. You can add tasks, list them, mark them as done and delete them from a text menu.
 
-## ✅ Features
-- Add new tasks
-- List all existing tasks
-- Mark tasks as completed
-- Delete tasks
+```
+===== MAIN MENU =====
+1. Add Task
+2. View All Tasks
+3. Mark Task as Completed
+4. Delete Task
+5. Exit Program
+=====================
+```
 
-## 🧠 Technologies Used
-- Java 17+
-- Classes & Objects
-- Encapsulation
-- Basic exception handling
+## What it covers
 
-## ▶️ How to Run
+- Classes and encapsulation: `Task` holds the data, `TaskManager` handles the list, and `Main` handles the user interaction
+- `ArrayList` for storing tasks, with an auto-incremented ID for each task
+- Input validation, so typing a letter where a number is expected asks again instead of crashing
+- Java 17 features such as switch expressions (`case 1 -> ...`)
 
-Clone the repository
+Tasks are kept in memory only, so they are lost when the program closes.
+
+## Running it
+
+Requires JDK 17 or newer.
+
 ```bash
 git clone https://github.com/yavuzkrm/task-manager-java.git
-```
-
-Compile the project
-```bash
-javac -d out src/Main.java src/model/Task.java src/service/TaskManager.java
-```
-
-Run the application
-```bash
+cd task-manager-java
+javac -d out src/*.java
 java -cp out Main
 ```
 
-## 📁 Project Structure
+## Project structure
 
-```text
-src/
- ├─ model/
- │   └─ Task.java
- ├─ service/
- │   └─ TaskManager.java
- └─ Main.java
 ```
+src/
+├── Main.java          # menu and user input
+├── Task.java          # task model (id, description, completed)
+└── TaskManager.java   # add / list / complete / delete
+```
+
+## License
+
+MIT

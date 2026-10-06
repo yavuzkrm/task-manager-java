@@ -14,8 +14,7 @@ public class Main {
             displayMenu();
 
             System.out.print("Enter your choice (1-5): ");
-            int choice = scanner.nextInt();
-            scanner.nextLine();
+            int choice = readInt(scanner);
 
             switch (choice) {
                 case 1 -> {
@@ -38,8 +37,7 @@ public class Main {
                         System.out.println("\nNo tasks available. Add some tasks first!\n");
                     } else {
                         System.out.print("Enter task ID to mark as completed: ");
-                        int completedId = scanner.nextInt();
-                        scanner.nextLine();
+                        int completedId = readInt(scanner);
 
                         if (taskManager.markTaskAsCompleted(completedId)) {
                             System.out.println("\nTask marked as completed!\n");
@@ -54,8 +52,7 @@ public class Main {
                         System.out.println("\nNo tasks available. Add some tasks first!\n");
                     } else {
                         System.out.print("Enter task ID to delete: ");
-                        int deleteId = scanner.nextInt();
-                        scanner.nextLine();
+                        int deleteId = readInt(scanner);
 
                         if (taskManager.deleteTask(deleteId)) {
                             System.out.println("\nTask deleted successfully!\n");
@@ -79,6 +76,17 @@ public class Main {
         }
 
         scanner.close();
+    }
+
+    private static int readInt(Scanner scanner) {
+        while (true) {
+            String line = scanner.nextLine().trim();
+            try {
+                return Integer.parseInt(line);
+            } catch (NumberFormatException e) {
+                System.out.print("Please enter a valid number: ");
+            }
+        }
     }
 
     private static void displayMenu() {
